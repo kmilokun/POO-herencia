@@ -1,0 +1,64 @@
+
+public class ejercicio {
+
+    public static void main(String[] args) {
+
+        Cliente cliente = new Cliente();
+        cliente.setCredito(2500.0);
+        cliente.setEdad(37);
+        cliente.setNumeroDeTelefono("123456789");
+        cliente.setNombre("Juan");
+
+        Trabajador trabajador = new Trabajador();
+        trabajador.setSalario(2000.0);
+        trabajador.setEdad(40);
+        trabajador.setNumeroDeTelefono("987654321");
+        trabajador.setNombre("Pedro");
+
+        System.out.println(cliente.nombre);
+        System.out.println(cliente.edad);
+        System.out.println(cliente.numeroDeTelefono);
+        System.out.println(cliente.credito);
+
+        System.out.println();
+
+        System.out.println(trabajador.nombre);
+        System.out.println(trabajador.edad);
+        System.out.println(trabajador.numeroDeTelefono);
+        System.out.println(trabajador.salario);
+    }
+}
+
+class Persona{
+    int edad;
+    String numeroDeTelefono;
+    String nombre;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setNumeroDeTelefono(String numeroDeTelefono) {
+        this.numeroDeTelefono = numeroDeTelefono;
+    }
+}
+
+class Cliente extends Persona{
+    Double credito;
+
+    public void setCredito(Double credito) {
+        this.credito = credito;
+    }
+}
+
+class Trabajador extends Persona{
+    Double salario;
+
+    public void setSalario(Double salario) {
+        this.salario = salario;
+    }
+}
